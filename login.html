@@ -1,0 +1,120 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        div{text-align: center;}
+        body{
+            background-color: gray;
+        }
+    </style>
+    <title>Validation form</title>
+    <script>
+        function Validateform() {
+            var usr = document.regform.usrname.value;
+            var pwd = document.regform.pswd.value;
+
+            if (usr.length < 5 || usr.length > 12) {
+                alert("Username should be from 5 to 12 characters");
+                return false;
+            }
+            if (pwd.length < 7 || usr.length > 12) {
+                alert("Password should be from 7 to 12 characters");
+                return false;
+            }
+
+            var valid = false;
+            if (document.getElementById("english").checked) {
+                valid = true;
+            }
+            else if (document.getElementById("nonenglish").checked) {
+                valid = true;
+            }
+            if (!valid) {
+                alert("Please check atleast one checkbox");
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+    <div>
+    <h1>Registration form</h1>
+        <form style="margin: auto; width: 230px;" name="regform" onsubmit="Validateform()" action="">
+            <table>
+                <tr>
+                    <td><label for="">Username: </label></td>
+                    <td><input type="text" name="usrname" id="" required></td>
+                </tr>
+                <tr>
+                    <td><label for="">Password: </label></td>
+                    <td><input type="password" name="pswd" id="" required></td>
+                </tr>
+                <tr>
+                    <td><label for="">Name: </label></td>
+                    <td><input type="text" name="name" id="" required></td>
+                </tr>
+                <tr>
+                    <td><label for="">City: </label></td>
+                    <td>
+                        <select name="city" id="Country" required>
+                            <option value="" disabled selected>(Please select your city)</option>
+                            <option value="Chennai">Chennai</option>
+                            <option value="Banglore">Banglore</option>
+                            <option value="Bombay">Bombay</option>
+                            <option value="Delhi">Delhi</option>
+                        </select>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td><label for="">Zipcode: </label></td>
+                    <td><input type="number" name="" id="" required></td>
+                </tr>
+                <tr>
+                    <td><label for="">Email: </label></td>
+                    <td><input type="email" name="" id="" required></td>
+                </tr>
+                <tr>
+                    <td><label for="">Sex: </label></td>
+                    <td><input type="radio" value="Male" name="sex" id="male" required>
+                        <label for="male">Male</label>
+                        <input type="radio" value="Female" name="sex" id="female" required>
+                        <label for="female">Female</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="">Language: </label></td>
+                    <td><input type="checkbox" value="English" name="lang" id="english">
+                        <label for="english">English</label>
+                        <input type="checkbox" value="NonEnglish" name="lang" id="nonenglish">
+                        <label for="nonenglish">Non English</label>
+                    </td>
+                </tr>
+               
+            </table>
+            <a href="PVR.html">
+           <input type="Submit">
+           </a>
+        </form>
+        <br>
+        <a href="PVR.html">Go to the official page</a>
+        
+    
+        <hr>
+        <video height="240" width="320" controls>
+            <source src="avengers.mp4" type="video/mp4">
+            Your browser does not support the video.
+            </video>
+            
+    </div>
+       
+</body>
+
+</html>

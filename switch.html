@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>Favourite Movie</title>
+        <style>
+            body{
+            background-color: rgb(0, 255, 179);
+
+            }
+        </style>
+    </head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body ng-app="">
+
+My favorite topic is:
+<select ng-model="myVar">
+  <option value="Endgame">Endgame
+  <option value="Toy-Story-4">Toy-story
+  <option value="Joker">Joker
+  <option value="Lion King">Joker
+</select>
+
+<hr>
+<div ng-switch="myVar">
+  <div ng-switch-when="Endgame">
+     <h1>Avengers Endgame</h1>
+     <p>Its the final Avengers movie. Brace yourself</p>
+  </div>
+  <div ng-switch-when="Toy-Story-4">
+     <h1>Toy Story 4</h1>
+     <p>Enjoy the fun between the toys</p>
+  </div>
+  <div ng-switch-when="Joker">
+     <h1>Joker</h1>
+     <p>The new joker at his best.DC has made the right choice after decades</p>
+  </div>
+  <div ng-switch-when="Lion King">
+    <h1>Joker</h1>
+    <p>The new beginnning of the king</p>
+ </div>
+  <div ng-switch-default>
+     <h1>Select your favourite movie</h1>
+     <p>Select topic from the dropdown, to switch the content of this DIV.</p>
+  </div>
+</div>
+<hr>
+
+<p>Get to know details about your favourite movie.</p>
+
+</body>
+</html>

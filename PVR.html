@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>PVR CINEMAS</title>
+   <style>
+       #railway{
+          
+           color:black;
+           text-align: center;
+       }
+       .center {
+           display: block;
+           margin-left: auto;
+           margin-right: auto;
+           width: 50%;
+           text-align: center;
+           
+       }
+        body{
+            background-color:yellowgreen;
+
+           }
+           @keyframes myChange {
+  from {
+      height: 100px;
+  } to {
+      height: 0;
+  }
+}
+
+
+
+   </style> 
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+   
+
+</head>
+<body>
+    
+    <a href="#now_showing">GO TO NOW SHOWING</a>
+    <div id ="railway"> <h1>          PVR CINEMAS</h1></div>
+    <div class="center" alt="Paris"><img src= "pvrs.jpg"  width="100px" height="100x"></div>
+    <h2>More about PVR CINEMAS
+    
+    </h2>
+    <h4> 
+        PVRCinemas.com is a fastest growing online portal that is aiming to capture the entire movie business providing exclusive numbers associated with the film industry, retail entertainment concepts, and bringing world-class immersive viewing to the reach of their customers. PVR together with Cinemax is operating a giant cinema circuit inherent of 400 plus screens covering approximately 38 cities in India. Their service is hovering to entertain over 70 million patrons. So take advantage of PVR coupons, because now is time to experience the complete indulgence in an absolutely luxurious screen. Book your show today with PVRCinemas exclusive coupon </h4>
+        <a href=" https://www.bing.com/maps?q=pvr+cinemas+location+chennai&qs=n&form=QBRE&sp=-1&pq=pvr+cinemas+location+chennai&sc=1-28&sk=&cvid=03E6E234E9894A7289DBF7B6CA9263F6"><h3>CHENNAI - VELACHERY</h3></a>
+        <a href="https://www.bing.com/maps?q=pvr+cinemas+location+chennai&qs=n&form=QBRE&sp=-1&pq=pvr+cinemas+location+chennai&sc=1-28&sk=&cvid=03E6E234E9894A7289DBF7B6CA9263F6"><h3>CHENNAI - GRAND GALADA </h3></a>
+        <a href="https://www.bing.com/maps?q=pvr+cinemas+location+chennai&qs=n&form=QBRE&sp=-1&pq=pvr+cinemas+location+chennai&sc=1-28&sk=&cvid=03E6E234E9894A7289DBF7B6CA9263F6"><h3>CHENNAI - SKYWALK</h3></a>
+        <a href="https://www.bing.com/maps?q=pvr+cinemas+location+chennai&qs=n&form=QBRE&sp=-1&pq=pvr+cinemas+location+chennai&sc=1-28&sk=&cvid=03E6E234E9894A7289DBF7B6CA9263F6"><h3>CHENNAI - AMINJIKARAI</h3></a>
+        <div id="now_showing"><h3>NOW SHOWING</h3></div>
+        <a href="indexes.html">
+        <img src="lions.jpg" width="200px" height="300px">
+        </a>
+        <a href="indexes.html">
+        <img src="avengerss.jpg" width="200px" height="300px">
+        </a>
+        <a href="indexes.html">
+
+        <img src="joker.jpg" width="200px" height="300px">
+        </a>
+        <a href="indexes.html">
+
+        <img src="toy.jpg" width="200px" height="300px">
+        </a>
+        <hr>
+        <iframe src="https://marvelcinematicuniverse.fandom.com/wiki/Avengers:_Endgame" title="Endgame">
+        </iframe>
+        <hr>
+        <div ng-app="myApp" ng-controller="namesCtrl">
+
+            <p>Enter the movie you want to search</p>
+            
+            <p><input type="text" placeholder="Movie Name" ng-model="test"></p>
+            
+            <ul>
+              <li ng-repeat="x in names | filter:test">
+                {{ x }}
+              </li>
+            </ul>
+            
+         </div>
+            <script>
+                angular.module('myApp', []).controller('namesCtrl', function($scope) {
+                    $scope.names = [
+                       'Avengers-Endgame:$12',
+                       'Joker : $10',
+                       'Lion-King : $9',
+                       'Toy-Story-4 : $8'
+                    ];
+                });
+                </script>
+            
+        <a href="calc.html">Calculator to calculate budget</a>
+
+            <hr>
+        <a href="switch.html"><h4>Select your favourite movie</h4></a>
+        <hr>
+        <h2 >To know more info about your favourite movie</h2>
+        <a href="anim.html">Select here</a>
+        <hr>
+        <h4>Enter your review about the movie</h4>
+        <a href="text.html"><h4>Click here to write review</h4></a>
+        <hr>
+        <h3>To view the clip in Registration form click here "</h3>
+        <a href="videoplayer.html">This is the video</a>
+        <hr>
+
+
+        
+        <button id="test" onclick="drawShape();">Quote
+            <canvas id="mycanvas"></canvas>
+
+        <svg width="40" height="40" style="float: right;">
+            <circle cx="50" cy="50" r="40" stroke="black" stroke-width="4" fill="orange" />
+          </svg>
+          
+          
+        <script>
+            function drawShape() {
+
+// get the canvas element using the DOM
+var canvas = document.getElementById('mycanvas');
+
+// Make sure we don't execute when canvas isn't supported
+if (canvas.getContext) {
+
+    // use getContext to use the canvas for drawing
+    var ctx = canvas.getContext('2d');
+
+    ctx.fillStyle = '#00F';
+    ctx.font = 'Italic 30px Sans-Serif';
+
+    ctx.textBaseline = 'Top';
+    ctx.fillText('BINGE AND WATCH', 40, 100);
+
+    ctx.font = 'Bold 30px Sans-Serif';
+    ctx.strokeText('BINGE AND WATCH', 40, 50);
+} else {
+    alert('You need Safari or Firefox 1.5+ to see this demo.');
+}
+}
+        </script>
+        
+  
+</html>
