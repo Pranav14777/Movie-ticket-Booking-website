@@ -1,1 +1,2 @@
 # Movie-ticket-Booking-website
+Developed a Dynamic website for movie ticket booking in an efficient manner. Employed HTML, CSS, Angular, MongoDb and many other tools for its development. It provides users the option to select the movie and book tickets. It displays the prices and availability of seats for the respective movie as well. Subsequently also sends a confirmation mail containing the booking details to the user.
